@@ -1,0 +1,8 @@
+{% extends "pmgapp/base.html" %}
+{% block title %}НСЗУ пакети медичних гарантій{% endblock %}
+{% block content %}
+    <h1>{{ packet.title }}</h1>
+   <p>(пакет № {{packet.packet_number}})</p>
+   <h2>Вимоги до пакету</h2>
+    {{packet.vymohy | safe}}
+{% endblock %}

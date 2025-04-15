@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link href="{% static "css/pmg.css" %}" rel="stylesheet">
+</head>
+<body>
+	<div id="content">
+		{% block content %}{% endblock %}
+        </div>
+  <div id="sidebar">
+ {% block sidebar %}
+              <h2>right sidebar</h2>
+              <p>test.</p>
+{% endblock %}
+        </div>
+</div>
+</body>
+</html>
