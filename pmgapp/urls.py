@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.packet_list, name='packet_list'),
     path('<int:packet_number>/', views.packet_detail, name='packet_detail'),
     path('<int:packet_number>/vymohy/', views.packet_vymohy, name='packet_vymohy'),
+    path('<int:packet_number>/tab/', views.packet_tab, name='packet_tab'),
 ]

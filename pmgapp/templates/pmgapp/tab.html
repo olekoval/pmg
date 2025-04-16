@@ -1,0 +1,33 @@
+{% extends "pmgapp/base.html" %}
+{% block title %}Таблиця співставлення для пакету {{ packet.title }}{% endblock %}
+{% block content %}
+    <h2>Таблиця співставлення для пакету: {{ packet.title }} (№{{ packet.packet_number }})</h2>
+    {% if tablytsi %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-posluga">Медична послуга</th>
+                    <th class="col-nk25">Код національного класифікатора НК 025:2021 “Класифікатор хвороб та споріднених проблем охорони здоров’я”</th>
+                    <th class="col-nk26">Код національного класифікатора НК 026:2021 “Класифікатор медичних інтервенцій”</th>
+                    <th class="col-dodatok">Додаткова інформація</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in tablytsi %}
+                    <tr>
+                        <td class="col-posluga">{{ item.posluga }}</td>
+                        <td class="col-nk25">{{ item.nk25|default_if_none:"" }}</td>
+                        <td class="col-nk26">{{ item.nk26|default_if_none:"" }}</td>
+                        <td class="col-dodatok">{{ item.dodatoc|default_if_none:"" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Для цього пакету немає даних у таблиці співставлення.</p>
+    {% endif %}
+    <a href="{% url 'packet:packet_list' %}" class="btn btn-secondary mt-3">Назад до списку пакетів</a>
+{% endblock %}
+{% block sidebar %}
+<a href="{% url 'packet:packet_list' %}" class="btn btn-secondary mt-3">Назад до списку пакетів</a>
+{% endblock %}

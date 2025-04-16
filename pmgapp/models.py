@@ -17,4 +17,20 @@ class Packet(models.Model):
 
     def __str__(self):
         return self.title
+
+class TablytsySpivstavleny(models.Model):
+    packet = models.ForeignKey(
+        Packet,
+        on_delete=models.CASCADE,
+        related_name='spivstavlennya'
+    )
+    posluga = models.TextField()
+    nk25 = models.TextField(null=True)
+    nk26 = models.TextField(null=True)
+    dodatoc = models.TextField(null=True)
     
+    class Meta:
+        ordering = ['packet', 'posluga']
+
+    def __str__(self):
+        return self.posluga

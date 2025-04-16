@@ -4,9 +4,11 @@
     <h1>{{ packet.title }}</h1>
    <p>(пакет № {{packet.packet_number}})</p>
     {{packet.postanova | safe}}
+<a href="{% url 'packet:packet_list' %}" class="btn btn-secondary mt-3">Назад до списку пакетів</a>
 {% endblock %}
 {% block sidebar %}
-    <h2>right sidebar</h2>
-    <p>test.</p>
-    <p><a href="{% url 'packet:packet_vymohy' packet.packet_number %}">Вимоги</a></p>
+    <h4>Додаткова інформація:</h4>
+    <p><a href="{% url 'packet:packet_vymohy' packet.packet_number %}" class="btn btn-primary btn-sm w-100">Вимоги до пакету</a></p>
+    <p><a href="{% url 'packet:packet_tab' packet.packet_number %}" class="btn btn-primary btn-sm w-100">Таблиця співставлення</a></p>
+    <a href="{% url 'packet:packet_list' %}" class="btn btn-secondary btn-sm w-100">Назад до списку пакетів</a>
 {% endblock %}

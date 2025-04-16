@@ -1,0 +1,15 @@
+Безкоштовна плаформа для веб-додатків Render
+https://docs.google.com/document/d/1dtTP8Ep3ZTWlvSyB5NFGes6X-KAYjFszSPPeGw01zqc/edit?usp=sharing
+
+Встановлення віртуального середовища
+https://docs.google.com/document/d/1ray82FyOLhOuw1636vv9CMQhVIS5md9fiE_GeU2MzUA/edit?usp=sharing
+
+Додавання даних у БД за допомогою окремого скрипта python
+https://docs.google.com/document/d/1bQZW_v7kw5Y2WFlp9TAp3Fy_TXzWoqSTAikCOl43IyQ/edit?usp=sharing
+
+Фільтрація записів
+https://docs.google.com/document/d/1PWwKkAfJx2PQs_FFXV7FcFZexSxA6UNmIvdYnLvLZXc/edit?usp=sharing
+
+
+Створення представлення
+https://docs.google.com/document/d/1vAZnACVM2xwOIbM1u9t5j1DYbXxY5qH6mGErVu0T1sk/edit?usp=sharing
