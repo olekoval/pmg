@@ -1,8 +1,8 @@
 databases:
-  - name: pmgdb  # Змініть назву бази даних, якщо бажаєте
+  - name: pmgdb
     plan: free
-    databaseName: pmg  # Змініть назву бази даних, якщо бажаєте
-    user: pmgservices:
+    databaseName: pmg 
+services:
   - type: web
     plan: free
     name: pmg-web  # Змініть назву вебсервісу, якщо бажаєте
