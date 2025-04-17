@@ -1,0 +1,20 @@
+databases:
+  - name: pmgdb  # Змініть назву бази даних, якщо бажаєте
+    plan: free
+    databaseName: pmg  # Змініть назву бази даних, якщо бажаєте
+    user: pmgservices:
+  - type: web
+    plan: free
+    name: pmg-web  # Змініть назву вебсервісу, якщо бажаєте
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn pmg.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pmgdb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
