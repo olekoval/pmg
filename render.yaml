@@ -2,10 +2,11 @@ databases:
   - name: pmgdb
     plan: free
     databaseName: pmg 
+    user: pmg
 services:
   - type: web
     plan: free
-    name: pmg-web  # Змініть назву вебсервісу, якщо бажаєте
+    name: pmg
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn pmg.asgi:application -k uvicorn.workers.UvicornWorker"
