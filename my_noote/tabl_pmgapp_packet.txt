@@ -1,9 +1,0 @@
---
--- Create model Packet
---
-
-CREATE TABLE "pmgapp_packet" (
-         "title" varchar(150) NOT NULL, 
-         "packet_namber" integer NOT NULL PRIMARY KEY, 
-         "postanova" text NOT NULL, 
-         "updated" datetime NOT NULL);

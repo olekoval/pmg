@@ -1,2 +1,0 @@
-python manage.py makemigrations pmgapp
-python manage.py migrate pmgapp

@@ -1,7 +1,7 @@
 {% extends "pmgapp/base.html" %}
 {% block title %}Таблиця співставлення для пакету {{ packet.title }}{% endblock %}
 {% block content %}
-    <h2>Таблиця співставлення для пакету: {{ packet.title }} (№{{ packet.packet_number }})</h2>
+    <h2>Таблиця співставлення для пакету: {{ packet.title }} (пакет №{{ packet.packet_number }})</h2>
     {% if tablytsi %}
         <table class="table table-bordered">
             <thead>
